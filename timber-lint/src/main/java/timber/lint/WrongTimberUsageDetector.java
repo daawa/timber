@@ -69,7 +69,8 @@ public final class WrongTimberUsageDetector extends Detector implements Detector
   @Override public void visitMethod(JavaContext context, UCallExpression call, PsiMethod method) {
     String methodName = call.getMethodName();
     JavaEvaluator evaluator = context.getEvaluator();
-
+    //System.out.println("========lint=========");
+    //System.out.println("methodName:" + methodName);
     if ("format".equals(methodName) && evaluator.isMemberInClass(method, "java.lang.String")) {
       checkNestedStringFormat(context, call);
       return;

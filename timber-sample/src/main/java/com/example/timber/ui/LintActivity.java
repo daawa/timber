@@ -64,6 +64,7 @@ public class LintActivity extends Activity {
     // TimberTagLength
     Timber.tag("abcdefghijklmnopqrstuvwx");
     Timber.tag("abcdefghijklmnopqrstuvw" + "x");
+    Timber.tag("fjdsklfjdsdskfljdskfljsdfkldfljdsflksdjffjdklsdjfksldjf");
 
     // TimberExceptionLogging
     Timber.d(new Exception(), new Exception().getMessage());
